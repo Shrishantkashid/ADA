@@ -1,0 +1,21 @@
+#include <stdio.h>
+#define V 4
+#define INF 99999 // Represents infinity
+// Function to print the final shortest distance matrix
+void printSolution(int dist[V][V])
+{
+	int i, j;
+	printf("Shortest distances between every pair of vertices:\n");
+for (i = 0; i < V; i++)
+{
+for (j = 0; j < V; j++)
+{
+if (dist[i][j] == INF)
+printf("INF\t");
+else
+printf("%d\t", dist[i][j]);
+}
+printf("\n");
+}
+}
+// Floyd-Warshall algorithm
